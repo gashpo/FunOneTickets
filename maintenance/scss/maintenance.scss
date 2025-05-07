@@ -1,0 +1,38 @@
+@import "variable/variable";
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.announcement {
+  width: px(960);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    color: color(gray-900);
+    margin-bottom: spacing(6);
+  }
+
+  p {
+    @include fontRWD(body2);
+    color: color(gray-500);
+  }
+
+  img {
+    width: px(400);
+  }
+
+  @include max-to(tablet) {
+    flex-direction: column-reverse;
+    gap: spacing(5);
+
+    img {
+      width: px(250);
+      max-width: calc(100svw - px(40));
+    }
+  }
+}

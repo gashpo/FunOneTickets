@@ -1,0 +1,272 @@
+/* reset css */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Varela&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+section,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: initial;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: 0;
+}
+
+* {
+  font-family: "noto sans tc", sans-serif;
+}
+
+p,
+span {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  p,
+  span {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 400;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.8125rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2.375rem;
+    line-height: 2.625rem;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.625rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 2.1875rem;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+  }
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+  }
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h6 {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    font-weight: 700;
+  }
+}
+
+.container {
+  max-width: 75rem;
+  margin: auto;
+}
+@media (max-width: 1279px) {
+  .container {
+    max-width: calc(100svw - 2.5rem);
+  }
+}
+
+header {
+  padding: 1rem 0rem;
+}
+header .logo {
+  height: 3.25rem;
+  max-width: 100svw;
+}
+
+main {
+  min-height: calc(100svh - 8.9375rem);
+}
+
+footer {
+  max-width: 75rem;
+  margin: auto;
+  text-align: center;
+  border-top: 0.0625rem solid #d7d7d7;
+  padding: 1.25rem 0rem;
+}
+footer copyright {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: 400;
+  color: #959595;
+}
+@media (max-width: 991px) {
+  footer copyright {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 991px) {
+  header .logo {
+    height: 2.5rem;
+  }
+  main {
+    min-height: calc(100svh - 8.1875rem);
+  }
+}

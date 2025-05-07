@@ -1,0 +1,174 @@
+// 字重
+$font-weight: (
+  "Light": 300,
+  "Regular": 400,
+  "Medium": 500,
+  "Bold": 700,
+);
+@function fontW($key) {
+  @return map-get($font-weight, $key);
+}
+
+// 字體定義
+$font-family: (
+  desktop: (
+    h1: (
+      font-size: size(7xl),
+      line-height: px(77),
+      font-weight: fontW(Bold),
+    ),
+    h2: (
+      font-size: size(6xl),
+      line-height: px(58),
+      font-weight: fontW(Bold),
+    ),
+    h3: (
+      font-size: size(5xl),
+      line-height: px(46),
+      font-weight: fontW(Bold),
+    ),
+    h4: (
+      font-size: size(3xl),
+      line-height: px(34),
+      font-weight: fontW(Bold),
+    ),
+    h5: (
+      font-size: size(l),
+      line-height: px(22),
+      font-weight: fontW(Bold),
+    ),
+    h6: (
+      font-size: size(m),
+      line-height: px(19),
+      font-weight: fontW(Bold),
+    ),
+    body1: (
+      font-size: size(l),
+      line-height: px(28),
+      font-weight: fontW(Regular),
+    ),
+    body2: (
+      font-size: size(m),
+      line-height: px(24),
+      font-weight: fontW(Regular),
+    ),
+    body3: (
+      font-size: size(s),
+      line-height: px(21),
+      font-weight: fontW(Regular),
+    ),
+    caption: (
+      font-size: size(xs),
+      line-height: px(14),
+      font-weight: fontW(Regular),
+    ),
+  ),
+  tablet: (
+    h1: (
+      font-size: size(5xl),
+      line-height: px(42),
+      font-weight: fontW(Bold),
+    ),
+    h2: (
+      font-size: size(4xl),
+      line-height: px(35),
+      font-weight: fontW(Bold),
+    ),
+    h3: (
+      font-size: size(2xl),
+      line-height: px(26),
+      font-weight: fontW(Bold),
+    ),
+    h4: (
+      font-size: size(xl),
+      line-height: px(22),
+      font-weight: fontW(Bold),
+    ),
+    h5: (
+      font-size: size(l),
+      line-height: px(20),
+      font-weight: fontW(Bold),
+    ),
+    h6: (
+      font-size: size(m),
+      line-height: px(19),
+      font-weight: fontW(Bold),
+    ),
+    body1: (
+      font-size: size(l),
+      line-height: px(27),
+      font-weight: fontW(Regular),
+    ),
+    body2: (
+      font-size: size(m),
+      line-height: px(24),
+      font-weight: fontW(Regular),
+    ),
+    body3: (
+      font-size: size(s),
+      line-height: px(21),
+      font-weight: fontW(Regular),
+    ),
+    caption: (
+      font-size: size(xs),
+      line-height: px(14),
+      font-weight: fontW(Regular),
+    ),
+  ),
+);
+
+@function fontF($key, $device: desktop, $property: font-size) {
+  @if map-has-key($font-family, $device) {
+    $device-map: map-get($font-family, $device);
+    @if map-has-key($device-map, $key) {
+      $style-map: map-get($device-map, $key);
+      @if map-has-key($style-map, $property) {
+        @return map-get($style-map, $property);
+      } @else {
+        @error "The property `#{$property}` does not exist for `#{$key}` in the `#{$device}` map.";
+      }
+    } @else {
+      @error "The key `#{$key}` does not exist in the `#{$device}` map.";
+    }
+  } @else {
+    @error "The device `#{$device}` does not exist in the `$font-family` map.";
+  }
+}
+
+@mixin fontRWD($element) {
+  // 預設讀取 desktop 的樣式
+  font-size: fontF($element);
+  line-height: fontF($element, desktop, line-height);
+  font-weight: fontF($element, desktop, font-weight);
+
+  // 加入其他斷點的樣式
+  @include max-to(tablet) {
+    font-size: fontF($element, tablet);
+    line-height: fontF($element, tablet, line-height);
+    font-weight: fontF($element, tablet, font-weight);
+  }
+}
+
+// 用法
+p,
+span {
+  @include fontRWD(body1);
+}
+h1 {
+  @include fontRWD(h1);
+}
+h2 {
+  @include fontRWD(h2);
+}
+h3 {
+  @include fontRWD(h3);
+}
+h4 {
+  @include fontRWD(h4);
+}
+h5 {
+  @include fontRWD(h5);
+}
+h6 {
+  @include fontRWD(h6);
+}

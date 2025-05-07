@@ -1,0 +1,136 @@
+p,
+span {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  p,
+  span {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 400;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.8125rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2.375rem;
+    line-height: 2.625rem;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.625rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 2.1875rem;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+  }
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+  }
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  h6 {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    font-weight: 700;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 0rem;
+}
+
+.announcement {
+  width: 60rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.announcement h3 {
+  color: #191919;
+  margin-bottom: 1.25rem;
+}
+.announcement p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #7b7b7b;
+}
+@media (max-width: 991px) {
+  .announcement p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+}
+.announcement img {
+  width: 25rem;
+}
+@media (max-width: 991px) {
+  .announcement {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .announcement img {
+    width: 15.625rem;
+    max-width: calc(100svw - 2.5rem);
+  }
+}

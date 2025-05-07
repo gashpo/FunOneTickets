@@ -1,0 +1,22 @@
+// 間距設定
+$spacings: (
+  0: px(0),
+  1: px(2),
+  2: px(4),
+  3: px(8),
+  4: px(12),
+  5: px(16),
+  6: px(20),
+  7: px(24),
+  8: px(28),
+  9: px(32),
+  10: px(26),
+  11: px(40),
+  12: px(64),
+  13: px(72),
+  14: px(128),
+);
+
+@function spacing($key) {
+  @return map-get($spacings, $key);
+}

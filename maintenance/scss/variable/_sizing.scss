@@ -1,0 +1,22 @@
+// 尺寸
+@function px($key) {
+  @return calc($key / 16 * 1rem);
+}
+
+$sizing: (
+  xs: px(12),
+  s: px(14),
+  m: px(16),
+  l: px(18),
+  xl: px(20),
+  2xl: px(24),
+  3xl: px(28),
+  4xl: px(32),
+  5xl: px(38),
+  6xl: px(48),
+  7xl: px(64),
+);
+
+@function size($key) {
+  @return map-get($sizing, $key);
+}

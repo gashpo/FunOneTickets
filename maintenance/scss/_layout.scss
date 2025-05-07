@@ -1,0 +1,46 @@
+.container {
+  max-width: px(1200);
+  margin: auto;
+
+  @include max-to(desktop) {
+    max-width: calc(100svw - px(40));
+  }
+}
+
+header {
+  padding: spacing(5) spacing(0);
+
+  .logo {
+    height: px(52);
+    max-width: 100svw;
+  }
+}
+
+main {
+  min-height: calc(100svh - px(143));
+}
+
+footer {
+  max-width: px(1200);
+  margin: auto;
+  text-align: center;
+  border-top: px(1) solid color(gray-150);
+  padding: spacing(6) spacing(0);
+
+  copyright {
+    @include fontRWD(caption);
+    color: color(gray-400);
+  }
+}
+
+@include max-to(tablet) {
+  header {
+    .logo {
+      height: px(40);
+    }
+  }
+
+  main {
+    min-height: calc(100svh - px(131));
+  }
+}
